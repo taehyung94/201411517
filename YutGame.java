@@ -5,18 +5,18 @@ import java.awt.*;
 import java.awt.event.*;
 import com.sd.yut.*;
 
-public class DiceGame extends JFrame implements ActionListener{
+public class YutGame extends JFrame implements ActionListener{
 	String name1,name2;
-	Player p1;
-	Player p2;
+	YutPlayer p1;
+	YutPlayer p2;
 	JTextField player1;
 	JTextField player2;
 	JLabel l1;
 	JLabel l2;
 	JButton b1;
 	JButton b2;
-	DiceGame(){
-		setTitle("Dice");
+	YutGame(){
+		setTitle("Yut");
 		this.setLayout(new GridLayout(3,2));
 		JLabel l1=new JLabel();
 		JLabel l2=new JLabel();
@@ -36,17 +36,14 @@ public class DiceGame extends JFrame implements ActionListener{
 		this.setSize(300,200);
 		this.setVisible(true);
 	}
-	public static void main(String[] args){
-		new DiceGame();
-	}
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource().equals(b1)){
-			Player p1=new Player(player1.getText());
-			Player p2=new Player(player2.getText());
+			YutPlayer p1=new YutPlayer(player1.getText());
+			YutPlayer p2=new YutPlayer(player2.getText());
 			p1.play();
 			p2.play();
-			l1.setText(p1.getNum().toString());
-			l2.setText(p2.getNum().toString());
+			l1.setText(p1.getYut());
+			l2.setText(p2.getYut());
 			if(p1.getNum()>p2.getNum())
 				JOptionPane.showMessageDialog(this,p1.getName()+" 승리!");
 			else if(p1.getNum()<p2.getNum())
@@ -56,9 +53,12 @@ public class DiceGame extends JFrame implements ActionListener{
 		}
 		else if(e.getSource().equals(b2)){
 			player1.setText("");
-			player2.setText("");
+			player1.setText("");
 			l1.setText("");
 			l2.setText("");
 		}
+	}
+	public static void main(String[] args){
+		new YutGame();
 	}
 }
