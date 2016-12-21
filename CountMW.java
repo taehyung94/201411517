@@ -8,7 +8,7 @@ class CountMW{
 		for(int[] d:data){
 			if(m.containsKey("m")&&w.containsKey("w")){
 				m.put("m",m.get("m")+d[0]);
-			    w.put("w",w.get("w")+d[0]);
+			    w.put("w",w.get("w")+d[1]);
 			}
 			else{
 				m.put("m",d[0]);
