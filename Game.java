@@ -27,7 +27,7 @@ class Game extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		if(e.getSource().equals(b1))
 			new DiceGame();
-		else
+		else if(e.getSource().equals(b2))
 			new YutGame();
 	}
 }
