@@ -6,7 +6,7 @@ import javax.swing.*;
 public class CalcAreaGUIMain1{
 	public static void main(String[] args){
 	JFrame f=new JFrame();
-	Jpanel panel=new JPanel(new GridLayout(3,2));
+	JPanel panel=new JPanel(new GridLayout(3,2));
 	f.getContentPane().add(panel);
 	JLabel label1=new JLabel("반지름");
 	JLabel label2=new JLabel("넓이");
