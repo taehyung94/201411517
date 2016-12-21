@@ -36,8 +36,7 @@ public class CalcAreaGUIMain2 extends JFrame implements ActionListener{
 			AreaTf2.setText(Double.toString(Math.PI*Math.pow(r,2)));
 		}
 		else{
-			radiusTf1.setText("");
-			AreaTf2.setText("");		
+			radiusTf1.setText("");	
 		}
 	}
 	public static void main(String args[]){
